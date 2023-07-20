@@ -20,35 +20,38 @@ function writePassword() {
 
     //select PW criteria
     var lowercasePW = window.prompt('Would you like your password to include lowercase characters?');
-    if (lowercasePW === 'yes'){
+    var lowercaseAdded = (lowercasePW && lowercasePW.toLowerCase() === 'yes')
+    if (lowercaseAdded){
         alert('You have added lowercase characters to your password!'); 
     } else {
         alert('lowercase characters will not be included in your password')
     }
 
     var uppercasePW = window.prompt('Would you like your password to include uppercase characters?');
-    if (uppercasePW === 'yes'){
+    var uppercaseAdded = (uppercasePW && uppercasePW.toUpperCase() === 'yes')
+    if (uppercaseAdded){
         alert('You have added uppercase characters to your password!')
     } else {
         alert('uppercase characters will not be included in your password')
     }
 
     var addNumbers = window.prompt('Would you like your password to include numbers?')
-    if (addNumbers === 'yes'){
+    var numbersAdded = (addNumbers && addNumbers.toLowerCase() === 'yes')
+    if (numbersAdded){
         alert('You have added numbers to your password')
     } else {
         alert('Numbers will not be included in your password')
     }
 
     var specialCharacters = window.prompt('Would you like your password to include special characters?')
-    if (specialCharacters === 'yes'){
+    var specialAdded = (specialCharacters && specialCharacters.toLowerCase() === 'yes')
+    if (specialAdded){
         alert('You have added special characters to your password')
     } else {
         alert('Special characters will not be included in your password')
     }
 
     // Add lowercase characters to password
-    
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
 
