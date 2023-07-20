@@ -1,8 +1,15 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
+generateBtn.addEventListener("click", function() {
+    var generatedPassword = generatePassword();
+    window.prompt(`Your new password is: ${generatePassword}`)
+});
+
 // Write password to the #password input
 function generatePassword() {
+    var password= '';
 
     //this is the first prompt, which ask for the pw length
     var passwordLength = window.prompt('Enter password length between 8 and 128 characters');
@@ -13,7 +20,7 @@ function generatePassword() {
     //checking if pw is within the 8 - 128 range--Also prompting the user of their selection
     if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128){
         alert('Invalid! Please enter a password length between 8 and 128 characters!');
-        return writePassword();
+        return generatePassword();
     } else {
         alert(`You have entered a password lenght of: ${passwordLength}`);
     }
@@ -69,15 +76,24 @@ function generatePassword() {
     }
 
     //for loop to generate PW
-  
+    for (var i = 0; i < passwordLength; i++) {
+        var randomPW = Math.floor(Math.random() * collectAllCharacters.length);
+        password += collectAllCharacters.charAt(randomPW);
+    }
+
+    return password; // Return the password
+}
+    
+
 
     // Add lowercase characters to password
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
+//     var password = generatePassword();
+//     var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}
 
+
+// generatePassword();
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// generateBtn.addEventListener("click", generatePassword());
