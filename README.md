@@ -35,5 +35,4 @@ The following image shows the web application's appearance and functionality:
 
 ## Github Pages link
 
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+https://papicly.github.io/Password_Generator_JS/    
