@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+function generatePassword() {
 
     //this is the first prompt, which ask for the pw length
     var passwordLength = window.prompt('Enter password length between 8 and 128 characters');
@@ -50,6 +50,26 @@ function writePassword() {
     } else {
         alert('Special characters will not be included in your password')
     }
+
+    var collectAllCharacters = ''
+    if (lowercaseAdded){
+        collectAllCharacters += 'abcdefghijklmnopqrstuvwxyz'
+    }
+
+    if (uppercaseAdded){
+        collectAllCharacters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    }
+
+    if (numbersAdded){
+        collectAllCharacters += '0123456789'
+    }
+
+    if (specialAdded){
+        collectAllCharacters += '!@#$%^&*()<>?'
+    }
+
+    //for loop to generate PW
+  
 
     // Add lowercase characters to password
     var password = generatePassword();
