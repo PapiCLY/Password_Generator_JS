@@ -1,6 +1,30 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var upperBtn = document.querySelector('#upper')
+var lowerBtn = document.querySelector('#lower')
+var numBtn = document.querySelector('#numeral')
+var specialBtn = document.querySelector('#special')
 
+var lowercaseAdded = false
+var uppercaseAdded = false
+var numbersAdded = false
+var specialAdded = false
+
+lowerBtn.addEventListener('change', function(){
+    lowercaseAdded = lowerBtn.checked
+})
+
+upperBtn.addEventListener('change', function(){
+    uppercaseAdded = upperBtn.checked
+})
+
+numBtn.addEventListener('change', function(){
+    numbersAdded = numBtn.checked
+})
+
+specialBtn.addEventListener('change', function(){
+    specialAdded = specialBtn.checked
+})
 
 generateBtn.addEventListener("click", function() {
     var generatedPassword = generatePassword();
@@ -28,38 +52,60 @@ function generatePassword() {
     }
 
     //select PW criteria
-    var lowercasePW = window.prompt('Would you like your password to include lowercase characters?');
-    var lowercaseAdded = (lowercasePW && lowercasePW.toLowerCase() === 'yes')
-    if (lowercaseAdded){
-        alert('You have added lowercase characters to your password!'); 
-    } else {
-        alert('lowercase characters will not be included in your password')
-    }
+    // lowerBtn.addEventListener('change', function(){
+    //         var lowercaseAdded = "abcdefghijklmnopqrstuvwxyz" + collectAllCharacters
+    //     })
 
-    var uppercasePW = window.prompt('Would you like your password to include uppercase characters?');
-    var uppercaseAdded = (uppercasePW && uppercasePW.toUpperCase() === 'yes')
-    if (uppercaseAdded){
-        alert('You have added uppercase characters to your password!')
-    } else {
-        alert('uppercase characters will not be included in your password')
-    }
+    // upperBtn.addEventListener('change', function(){
+    //         var uppercaseAdded = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + collectAllCharacters
+    //     })
 
-    var addNumbers = window.prompt('Would you like your password to include numbers?')
-    var numbersAdded = (addNumbers && addNumbers.toLowerCase() === 'yes')
-    if (numbersAdded){
-        alert('You have added numbers to your password')
-    } else {
-        alert('Numbers will not be included in your password')
-    }
+    // numBtn.addEventListener('change', function(){
+    //     var numbersAdded = '0123456789' + collectAllCharacters
+    // })
+            
+    // specialBtn.addEventListener('change', function(){
+    //     var specialAdded = '@#$%^&*()<>?' + collectAllCharacters
+        
+    // })
+    
+   
+    // var lowercasePW = window.prompt('Would you like your password to include lowercase characters?');
+    // var lowercaseAdded = (lowercasePW && lowercasePW.toLowerCase() === 'yes')
+    // if (lowercaseAdded){
+    //     alert('You have added lowercase characters to your password!'); 
+    // } else {
+    //     alert('lowercase characters will not be included in your password')
+    // }
+  
 
-    var specialCharacters = window.prompt('Would you like your password to include special characters?')
-    var specialAdded = (specialCharacters && specialCharacters.toLowerCase() === 'yes')
-    if (specialAdded){
-        alert('You have added special characters to your password')
-    } else {
-        alert('Special characters will not be included in your password')
-    }
+    // var uppercasePW = window.prompt('Would you like your password to include uppercase characters?');
+    // var uppercaseAdded = (uppercasePW && uppercasePW.toUpperCase() === 'yes')
+    // if (uppercaseAdded){
+    //     alert('You have added uppercase characters to your password!')
+    // } else {
+    //     alert('uppercase characters will not be included in your password')
+    // }
 
+   
+    // var addNumbers = window.prompt('Would you like your password to include numbers?')
+    // var numbersAdded = (addNumbers && addNumbers.toLowerCase() === 'yes')
+    // if (numbersAdded){
+    //     alert('You have added numbers to your password')
+    // } else {
+    //     alert('Numbers will not be included in your password')
+    // }
+
+   
+    // var specialCharacters = window.prompt('Would you like your password to include special characters?')
+    // var specialAdded = (specialCharacters && specialCharacters.toLowerCase() === 'yes')
+    // if (specialAdded){
+    //     alert('You have added special characters to your password')
+    // } else {
+    //     alert('Special characters will not be included in your password')
+    // }
+    
+   
     var collectAllCharacters = ''
     if (lowercaseAdded){
         collectAllCharacters += 'abcdefghijklmnopqrstuvwxyz'
