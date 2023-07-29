@@ -4,7 +4,9 @@ var generateBtn = document.querySelector("#generate");
 
 generateBtn.addEventListener("click", function() {
     var generatedPassword = generatePassword();
-    window.alert(`Your new password is: ${generatedPassword}`)
+    // window.alert(`Your new password is: ${generatedPassword}`)
+    var typePW = document.getElementById('password')
+    typePW.textContent = generatedPassword
 });
 
 // Write password to the #password input
