@@ -14,7 +14,7 @@
       </header>
       <div class="card">
         <div class="card-header">
-          <h2>Generate a Password</h2>
+          <h2>Generate a Password<span id="error"></span></h2>
         </div>
         <div class="card-body">
           <textarea
@@ -24,10 +24,14 @@
             aria-label="Generated Password"
           ></textarea>
           <div class="cb-area">
-            Uppercase:<input type="checkbox" id="lower">
-            Lowercase:<input type="checkbox" id="upper">
-            Numbers:<input type="checkbox" id="numeral">
-            Special Characters:<input type="checkbox" id="special">
+            <label for="" class="instructions">Choose which characters you would like in your password</label>
+            <div class="selections">
+                <input type="range" min="8" max="128" value="50" id="sliderchar"><span id="sliderValue">8</span>
+              <label for="upperCase" class="charColor">Uppercase:</label><input type="checkbox" id="lower">
+              <label for="upperCase" class="charColor">Lowercase:</label><input type="checkbox" id="upper" class="charColor">
+              <label for="upperCase" class="charColor">Numbers:</label><input type="checkbox" id="numeral" class="charColor">
+              <label for="upperCase" class="charColor">Special Characters:</label><input type="checkbox" id="special" class="charColor">
+            </div>
           </div>
         </div>
         <div class="card-footer">
@@ -35,6 +39,7 @@
         </div>
       </div>
     </div>
+    <p id="error" class="errorMessage"></p>
     <script src="script.js"></script>
   </body>
 </html>

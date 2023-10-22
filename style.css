@@ -31,7 +31,7 @@ header {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: rgb(241, 241, 241);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -54,6 +54,39 @@ header {
   min-height: 100px;
 }
 
+.charColor{
+  color: green;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red; /* Change the text color to red */
+  font-weight: bold; /* Optionally, make the text bold */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.instructions{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: blue;
+  font-weight: bold;
+}
+
+.selections{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#sliderValue{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
 .card-footer {
   text-align: center;
 }
@@ -86,6 +119,10 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(196, 43, 26);
 }
 
 button[disabled] {
