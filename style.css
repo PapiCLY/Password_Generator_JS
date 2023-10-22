@@ -72,7 +72,7 @@ header {
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: blue;
+  color: red;
   font-weight: bold;
 }
 
@@ -107,7 +107,7 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: hsl(241, 91%, 36%);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -122,7 +122,7 @@ header {
 }
 
 .btn:hover {
-  background-color: rgb(196, 43, 26);
+  background-color: rgb(13, 6, 71);
 }
 
 button[disabled] {
