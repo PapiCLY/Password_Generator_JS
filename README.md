@@ -30,7 +30,7 @@ Then the password is either displayed in an alert or written to the page
 
 The following image shows the web application's appearance and functionality:
 
-![Alt text](assets/03-javascript-homework-demo.png)
+![!\[Alt text\](assets/03-javascript-homework-demo.png)](assets/new_demo_img.png)
 
 
 ## Github Pages link
