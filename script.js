@@ -57,6 +57,9 @@ function generatePassword() {
     if (!lowercaseAdded && !uppercaseAdded && !numbersAdded && !specialAdded) {
         errorElement.textContent = "Please select at least one character type.";
         errorElement.classList.add('error-message'); 
+    } else{
+        errorElement.textContent = "";
+        errorElement.classList.remove('error-message');
     }
 
    
